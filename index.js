@@ -11,7 +11,7 @@ require('dotenv').config();
 //   })
 //   .catch(e => console.error('Could not start server', e.message));
 
-server.start(3000);
+server.start(process.env.PORT);
 
 mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser: true, useUnifiedTopology: true});
 
